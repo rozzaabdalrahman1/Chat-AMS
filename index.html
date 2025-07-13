@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat AMS الذكي</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00d1b2;
+    }
+
+    #nameArea {
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+
+    #nameArea input {
+      padding: 10px;
+      font-size: 16px;
+      width: 70%;
+    }
+
+    #nameArea button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #00d1b2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #chatBox {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      max-width: 700px;
+      height: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      overflow-y: scroll;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .msg {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+
+    .user {
+      background-color: #007bff;
+      color: white;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .bot {
+      background-color: #333;
+      color: white;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    #inputArea {
+      max-width: 700px;
+      margin: auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    #userInput {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      background: #1e1e1e;
+      color: white;
+      border: 1px solid #555;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #sendBtn {
+      background-color: #00d1b2;
+      color: white;
+    }
+
+    #clearBtn {
+      background-color: #e74c3c;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🤖 Chat AMS - الذكاء الصناعي بالعربي</h1>
+
+  <div id="nameArea">
+    <input type="text" id="userName" placeholder="أدخل اسمك...">
+    <br>
+    <button onclick="startChat()">ابدأ الدردشة</button>
+  </div>
+
+  <div id="chatBox" style="display: none;"></div>
+
+  <div id="inputArea" style="display: none;">
+    <input type="text" id="userInput" placeholder="اكتب رسالتك...">
+    <button id="sendBtn">إرسال</button>
+    <button id="clearBtn">مسح</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
